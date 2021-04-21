@@ -1,6 +1,7 @@
+//assignments list
 const links = [
   {
-    label: "Week 1 - notes",
+    label: "Week 1 Notes - Local Storage",
     url: "week1/index.html"
   }
 ]
@@ -18,3 +19,6 @@ links.forEach(link => {
   list.append(li);
   li.append(a);
 })
+
+//current year
+document.getElementById("year").innerHTML = new Date().getFullYear();
