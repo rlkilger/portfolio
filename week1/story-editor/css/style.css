@@ -1,0 +1,17 @@
+body {
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  margin: 20px;
+}
+
+input,
+button,
+textarea {
+  padding: 5px;
+  margin: 10px 0;
+}
+
+textarea {
+  background-color: #eeeeee;
+  width: 600px;
+  height: 200px;
+}

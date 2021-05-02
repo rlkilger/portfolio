@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Rebecca Kilger">
+    <meta name="description" content="WWD 330: Web Frontend Development I assignment portfolio">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo&family=Changa:wght@500&display=swap">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/small.css">
+    <title>Rebecca Kilger WDD 330 - Assignment Portfolio</title>  
+  </head>
+  <body>
+    <header>
+      <h1>Rebecca Kilger</h1>
+      <h2>WDD 330 Portfolio</h2>
+    </header>
+    <main>
+      <h3>Week 2 Notes</h3>
+      <section>
+        <h4>Javascript: Navice to Ninja Ch. 2 - Programming Basics</h4>
+        <p>C-style syntax - similar to C programming language</p>
+        <p>Best practice - each statement on it's own line</p>
+        <p>Reserved words - abstract, await, boolean, break, byte, case, catch, char, class, const, continue, debugger, default, delete, do, double, else, enum, export, extends, false, final, finally, float, for, function, goto, if, implements, import, in instanceof, int, interface, let, long, native, new, null, package, private, protected, public, return, short, static, super, switch, synchronized, this, throw, throws, transient, true, try, typeof, var, volatile, void, while, with, yield</p>
+        <p>Don't use undefined, NaN, Infinity</p>
+        <p>Primitive data types - String, Symbol(ES6), Number, Boolean, Undefined, Null</p>
+        <p>Two variable types(ES6) - const(can't be changed) and let(can be changed) and both have block scope(only exist inside block</p>
+        <p>const arrays(and other non-prim types) can still be changed using .value</p>
+        <p>Best practice - always use const when you can</p>
+        <p>Omitting const and let makes it a global variable</p>
+        <p>Don't start with _(private) or $(used in jQuery)</p>
+        <p>Use \ to escape special characters(', ", `, n, r, t, \(\\ escapes \))</p>
+        <p>Properties can be written name.length or name["length"]</p>
+        <p>Methods - .toUpperCase(), .nameCharAt(), .indexOf()(if not found, returns -1), .concat()</p>
+        <p>.isInteger() - returns true or false</p>
+        <p>Ox = hexidecimal, Oo = octal, 0b = binary</p>
+        <p>Number methods - careful of decimal(5.0.method(), (5).method(), 5..method(), 5 .method()</p>
+        <p>Increments - points = 5, points++(returns 5, then adds 1), ++points(adds 1, then returns 6)</p>
+        <p>Number to big returns Infinity, number too small returns 5e-324 or 0</p>
+        <p>Number.isFinite() to see if it is a number - returns true or false</p>
+        <p>Number() to convert string to number, String() to convert number to string(or use .toString()</p>
+        <p>Convert to int or string using parseInt() or parseFloat() - does not round</p>
+        <p>NaN = not a number</p>
+        <p>undefined = no value found</p>
+        <p>null = no value(behaves like 0)</p>
+        <p>Falsey values always return false - "", '', ``, 0, -0, NaN, false, null, undefined</p>
+        <p>!! displays whether true or false, !!"" = false</p>
+        <p>To find out if NaN, use Number.isNan()</p>
+        <p>To find out if string is number string, use Number("5") = 5, returns true</p>
+        <p>Can use greater than and less than on strings, compared alphabetically</p>
+      </section>
+      <section>
+        <h4>Javascript: Navice to Ninja Ch. 3 - Arrays, Logic, and Loops</h4>
+        <p>Arrays area a built-in object</p>
+        <p>Destructuring arrays - taking a value from an array and assigning it to individual variable(const [x, y] = [1, 2]; x = 1, y = 2)</p>
+        <p>Swap values - [x, y] = [y, x]; x = 2, y = 1</p>
+        <p>.length() returns length(does not effect array)</p>
+        <p>.pop() removes last item and returns it(does effect array)</p>
+        <p>.shift() removes first item and returns it(does effect array)</p>
+        <p>.push() adds item to end and returns new length(does effect array)</p>
+        <p>.unshift() adds item to start and returns new length(does effect array)</p>
+        <p>.concat() merges arrays(does not effect array)</p>
+        <p>.join() return array as a string separated by comma, or by value in ()(does not effect array)</p>
+        <p>.slice(x, y) start at x and end at(excluding) y(does not effect array)</p>
+        <p>.splice(x, y, "value") starts at x, removes y number of items, inserts "value" in its place(does effect array)</p>
+        <p>.reverse() reverses array(does effect array)</p>
+        <p>.sort() sorts alphabetically(for numbers too - [5, 9, 10].sort = [10, 5, 9]</p>
+        <p>.indexOf() finds value of array(does effect array)</p>
+        <p>.includes() returns true if value is found(can add index to specify location in array)</p>
+        <p>Multi Dementional array - const nested = [[1, 2], [a, b]]</p>
+        <p>Flattened array - const flat = [...x, ...y] = [1, 2, 3, 4]</p>
+        <p>Create a set - const set = new Set() or new Set([a, b, c]) = Set {a, b, c}</p>
+        <p>In sets, repeated values only appear once</p>
+        <p>String in set - new Set("hello") = Set {"h", "e", "l", "l", "o"}</p>
+        <p>.add() to add to set - new Set().add("hello") = Set {"hello"}</p>
+        <p>Arrays are unique values and can contain the same values</p>
+        <p>Different types are different values - {2} != {"2"}</p>
+        <p>Values have no index notation</p>
+      </section>
+      <section>
+        <h4>Code Example</h4>
+        <a href="quiz/index.html">Hero Name Quiz</a>
+      </section>
+    </main>
+    <footer>
+      <ul class="footer-list">
+        <li>&copy; <span id="year"></span></li>
+        <li>Rebecca Kilger</li>
+      </ul>
+    </footer>
+    <script src="js/javascript.js"></script>
+  </body>
+</html>

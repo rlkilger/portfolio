@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Rebecca Kilger">
+    <meta name="description" content="WWD 330: Web Frontend Development II - Week 2 Team Activity">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo&family=Changa:wght@500&display=swap">
+    <title>Rebecca Kilger WDD 330 - Week 2 Team Activity</title>  
+  </head>
+  <body>
+    <header>
+      <h1>Rebecca Kilger</h1>
+      <h2>WDD 330 Portfolio</h2>
+    </header>
+    <main>
+    <h3>Core Requirement</h3>
+    <!-- sum of numbers -->
+    <input type="text" name="number" id="number" placeholder="Enter a number: " onblur="checkValue();">
+    <p id="warning">Must be a number!</p>
+    <div id="result1"></div>
+    <button id="btn" onclick="sum(parseInt(document.getElementById('number').value))" ;>Total</button>
+    <br><br>
+    <!-- adding inputs -->
+    <input type="text" id="add1" placeholder="First number">
+    <button id="add"
+        onclick="add(parseFloat(document.getElementById('add1').value), parseFloat(document.getElementById('add2').value))">
+        + </button>
+    <button id="subtraction"
+        onclick="subtraction(parseFloat(document.getElementById('add1').value), parseFloat(document.getElementById('add2').value));">
+        - </button>
+    <button id="multiply"
+        onclick="multiply(parseFloat(document.getElementById('add1').value), parseFloat(document.getElementById('add2').value));">
+        * </button>
+    <input type="text" id="add2" placeholder="Second number">
+    <div id="result2"></div>
+    </main>
+    <footer>
+    </footer>
+    <script src="js/javascript.js"></script>
+  </body>
+</html>
