@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Rebecca Kilger">
+    <meta name="description" content="WWD 330: Web Frontend Development I assignment portfolio">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo&family=Changa:wght@500&display=swap">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/small.css">
+    <title>Rebecca Kilger WDD 330 - Assignment Portfolio</title>  
+  </head>
+  <body>
+    <header>
+      <h1>Rebecca Kilger</h1>
+      <h2>WDD 330 Portfolio</h2>
+    </header>
+    <main>
+      <h3>Week 3 Notes</h3>
+      <section>
+        <h4>Objects Methods: this</h4>
+        <p>Obejct method - let user = { sayHi: function() {alert("Hello");} }</p>
+        <p>Shorthand object method - let user = { sayHi() {alert("Hello");} }</p>
+        <p>"this" can be used even if it’s not a method of an object(unbound), but must be called with an object or returns undefined</p>
+        <p>Example: let user = { name: "John" }; let admin = { name: "Admin" }; function sayHi() {alert(this.name);}  user.f = sayHi; admin.f = sayHi; user.f() alerts John and admin.f alerts Admin</p>
+        <p>Chaining functions - user.sayHi().sayBye()</p>
+      </section>
+      <section>
+        <h4>Code Example</h4>
+        <a href="calculator/calculator.html">Calculator</a>
+      </section>
+      <section>
+        <h4>Javascript: Navice to Ninja Ch. 5 - Objects</h4>
+        <p>Arrays and functions are objects that are built into the language</p>
+        <p>Object literal - object that is created directly in the language by wrapping all its properties and methods in curly braces, they make it possible to create an object without having to define a class</p>
+        <p>If object name is not a valid name for a variable(has space, starts with number, etc), use quotes(but it's preferable to use valid variable names)</p>
+        <p>Object can be changed even when created using const, and properties don’t always appear in the order they were entered</p>
+        <p>Create empty object - const object = {}</p>
+        <p>ES6 way of assigning properties to existing object - variable name becomes the key</p>
+        <p>Example - const name = 'Iron Man'; const realName = 'Tony Stark'; const ironMan = {name, realName};</p>
+        <p>Property value can be a Javascript expression - const bewitched = true; const captainBritain = { name: 'Captain Britain', hero: bewitched ? false : true }; returns {name: 'Captain Britain', hero: false}</p>
+        <p>Check if object has a specific property - 'city' in superman; or superman.city !== undefined; or superman.hasOwnProperty('city');returns true or false</p>
+        <p>in and !== undefined return true when property is inherited and .hasOwnProperty() does not</p>
+        <p>Loop through object properties - for(const key in superman) {console.log(key + ":if(superman.hasOwnProperty(key)){console.log(key + ": " + superman[key]);}}</p>
+        <p>Object.keys() returns an array of the object's keys</p>
+        <p>Object.values() returns an array of the object's values</p>
+        <p>Object.entries() returns an array or the object's key-value pairs</p>
+        <p>Use delete to remove property - delete superman.fly; returns true if property was deleted, false if not found</p>
+        <p>Can nest objects using curly braces</p>
+        <p>If variable is assigned to an object that already exists, changes made using <strong>either</strong> reference will affect the same object</p>
+        <p>Namespacing - use object literal to create a namespace for groups of related functions</p>
+        <p>JSON - JavaScript Object Notation</p>
+        <p>Property names must be double-quoted</p>
+        <p>Permitted values are double-quoted strings, numbers, true, false, null, arrays and objects</p>
+        <p>Functions are not permitted values</p>
+        <p>.parse() - takes a string of data in JSON format and returns a JavaScript object</p>
+        <p>.stringify() - takies JavaScript object and returns a string of JSON data(methods are ignored)</p>
+        <p>Can add a space argument that adds new lines between each key-value pair</p>
+        <p>Math object has built-in properties:</p>
+        <p>Math.PI - ratio of the circumference and diameter of a circle</p>
+        <p>Math.SQRT2 - square root of 2</p>
+        <p>Math.SQRT1_2 - reciprocal of the square root of 2</p>
+        <p>Math.E - Euler's constant</p>
+        <p>Math.LN2 - natural logarithm of 2</p>
+        <p>Math.LN10 - natural logarithm of 10</p>
+        <p>Math.LOG2E // Log base 2 of Euler's constant</p>
+        <p>Math.LOG10E // Log base 10 of Euler's constant</p>
+        <p>Math object has built-in methods:</p>
+        <p>Math.abs() - returns absolute value</p>
+        <p>Math.ceil() - rounds up</p>
+        <p>Math.floor() - rounds down</p>
+        <p>Math.round() - rounds to nearest integer</p>
+        <p>Math.trunc() - truncated at decimal point</p>
+        <p>Math.exp() - raise number in parenthesis to the power of Euler’s constant</p>
+        <p>Math.pow() - raise first argument to the power of the second argument</p>
+        <p>Math.sqrt() - returns the positive square root of a number</p>
+        <p>Math.cbrt() - returns the cube root of numbers</p>
+        <p>Math.hypot() - returns the square root of the sum of the squares of all its arguments.</p>
+        <p>Math.max() - returns maximum number from arguments</p>
+        <p>Math.min() - returns minimum number from arguments</p>
+        <p>Math.random() - generates number between 0 (inclusive) and 1 (exclusive) - multiply to get random number between 0 and another number</p>
+        <p>const today = new Date();</p>
+        <p>today.toString(); returns 'Tue Feb 14 2017 16:35:18 GMT+0000 (GMT)'</p>
+        <p>Can add argument to Date() to return specific date</p>
+        <p>January is 0, February is 1, etc.</p>
+        <p>.getDay() - returns day of the week in number form</p>
+        <p>.getDate() - returns day of the month</p>
+        <p>.getMonth() - returns month(starting at 0)</p>
+        <p>.getFullYear() - returns year</p>
+        <p>Can use .setDate(), .setMonth(), etc to set date</p>
+        <p>RegExp Object (regular expression) - search strings for matches to the pattern</p>
+        <p>Search for string that contain - const pattern = /[a-zA-Z]+ing$/; or const pattern = new RegExp('[a-zA-Z]+ing');(second way can use strings</p>
+        <p>.test() returns true if pattern is found - pattern.test('joke'); returns false, pattern.test('joking'); returns true, pattern.test('jokingly'); returns false</p>
+        <p>.exec() - returns an array containing the first match found, or null if there aren’t any matches</p>
+        <p>pattern.exec('joking'); returns ['joking', index: 0, input: 'joking']</p>
+        <p></p>
+      </section>
+      <section>
+        <h4>Code Example</h4>
+        <a href="quiz/index.html">Hero Name Quiz</a>
+      </section>
+    </main>
+    <footer>
+      <ul class="footer-list">
+        <li>&copy; <span id="year"></span></li>
+        <li>Rebecca Kilger</li>
+      </ul>
+    </footer>
+    <script src="js/javascript.js"></script>
+  </body>
+</html>

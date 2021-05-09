@@ -1,4 +1,4 @@
-/ number 2
+// number 2
 function checkValue() {
     isNum = document.getElementById('number').value;
     if (isNaN(isNum)) {

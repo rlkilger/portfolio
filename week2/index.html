@@ -75,7 +75,60 @@
         <p>.add() to add to set - new Set().add("hello") = Set {"hello"}</p>
         <p>Arrays are unique values and can contain the same values</p>
         <p>Different types are different values - {2} != {"2"}</p>
-        <p>Values have no index notation</p>
+        <p>Set values have no index notation</p>
+        <p>.size() returns number of values</p>
+        <p>.has() returns true if value is found</p>
+        <p>.delete("value") returns true if value was found and removed, returns false if value not found</p>
+        <p>.clear() removes all values from set</p>
+        <p>Create array from set - const array = [...set] or or const array = Array.from(set)</p>
+        <p>Memory leak - If you add an array to a set and then delete the original array, set still contains the array values.</p>
+        <p>To avoid memory leak, use WeakSet() - can only contain non-primitive values and removes dead entries</p>
+        <p>Create a map - const map = new Map()</p>
+        <p>.set(1, "a") = Map {1 => "a"} - sets value</p>
+        <p>.get(1) = "a" - gets value</p>
+        <p>.has(1) = returns true of value is found</p>
+        <p>Add multiple values using arrays as parameters - new Map([[1, "a"], [2, "b"]])</p>
+        <p>.size() finds number of key-value pairs</p>
+        <p>.delete() returns true if value was found and removed, returns false if value not found</p>
+        <p>.clear() removes all values from map</p>
+        <p>Create array from map - const array = Array.from(map) - [[1, "a"], [2, "b"]]</p>
+        <p>WeakMap() has same differences from map as WeakSet()</p>
+        <p>Conditional(if statement) - (condition) ? run if true : run if false</p>
+        <p>Conditional example - (n % 2 === 0) ? "even" : "odd"</p>
+        <p>While - if breaking at 0, increment can go in condition - let i=5  while(--i) {run code}</p>
+        <p>Iterator function to iterate through array or set - for(const item of items) {run code}</p>
+        <p>Iterate through map using .keys(), .values(), or .entries() - for(const key of map.keys()) {run code} or for(const value of map.values()) {run code} or for(const [key, value] of map.entries()) {run code}</p>
+      </section>
+      <section>
+        <h4>Javascript: Navice to Ninja Ch. 4 - Functions</h4>
+        <p>Function declaration - function hello() {concole.log("Hello World!")}</p>
+        <p>Function expression assigns anonymous function to a variable - const hello = function() {console.log("Hello World!")}</p>
+        <p>Function() constructor (not recommended) creates global functions- const hello = new Function('console.log("Hello World!");');</p>
+        <p>If function is assigned to a variable, place parentheses after variable to invoke it as a function</p>
+        <p>Assign function to another variable - hello = hi; hi() prints "Hello World!"</p>
+        <p>Functions contain arguments variable that returns parameters like an array (but not an actual array, can't use array methods except length) - function arguments() {return arguments;} arguements(a, b, c) returns {'0':a, '1':b, '2':c}</p>
+        <p>Rest collects all parameters as array - function rest(...args){for(arg of args){console.log(arg);}} rest(2,4,6,8) logs 2 4 6 8</p>
+        <p>Default parameter assigned in function - function hello(name='World') {console.log(`Hello ${name}!);} logs "Hello World" if no parameter is given</p>
+        <p>Default parameters should always come after non-default parameters</p>
+        <p>Arrow function - const sum = x => x + x;</p>
+        <p>Multiple parameters - const sum = (x, y) => x + y;</p>
+        <p>No parameters - const hello = () => console.log("Hello world!");</p>
+        <p>The return keyword isn't required if the return statement is the only statement in the body of the function</p>
+        <p>Having multiple lines in body requires curly braces and return statement</p>
+        <p>Function declaration can be called before it is declared</p>
+        <p>Callback - function that is passed as an argument to another function</p>
+        <p>Example of how to use callback - function sing(song,callback) {console.log(`I'm singing along to ${song}.`); callback();}</p>
+        <p>Callback can also be an anonymous function(only good for one-off tasks) - sing('Let It Go',() => {console.log("I'm standing on my head.");});</p>
+        <p>Sort numbers with callback function - function numerically(a,b) {return a-b;} [1, 5, 16, 4, 8, 13, 10].sort(numerically);</p>
+        <p>Use arrow function in .foreach() to iterate through array -  colors.forEach((color,index) => console.log(`Color at position ${index} is ${color}`));</p>
+        <p>.map() also iterates through an array</p>
+        <p>Examples using .map() - [1,2,3].map(sum); or [1,2,3].map(x => x + x); or ['red','green','blue'].map(color => console.log(`${color.toUpperCase()}`));</p>
+        <p>Parameters are 1. item in the array, 2. index of item, and 3. the array itself - ['red','green','blue'].map((color, index, array) => console.log(`Element ${index} is ${color}. There are ${array.length} items in total.`));</p>
+        <p>.reduce() iterates through array and cumulatively combines each result, returns a single value - [1,2,3,4,5].reduce((acc,val) => prev + val);</p>
+        <p>Used with callback function that takes two parameters - 1. accumulated total and 2. current item</p>
+        <p>.filter() filters and returns new array</p>
+        <p>Other methods - reduceRight(), every(), find() and some()</p>
+        <p>Iterator functions can be chained</p>
       </section>
       <section>
         <h4>Code Example</h4>
