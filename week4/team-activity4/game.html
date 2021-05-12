@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/game.css">
+    <title>TIC TAC TOE</title>
+</head>
+<body>
+<!-- <body ontouchend="playGame()";> -->
+    <!-- Core Requirements
+ Build a 3X3 board in HTML and CSS.
+You could do this with either a table element, or a collection of divs. Both have their advantages and disadvantages.
+ Attach a touchend listener to the board.
+When a cell is touched it should add either an 'X or an 'O', depending on whether it is player 1 or player 2's turn.
+ Add a reset button.
+When touched the reset button should remove all of the marks from the board. -->
+<header>
+    <h2>Week 4 Team 3</h2>
+ <hr>
+</header>
+<h1>Tic-Tac-Toe</h1>
+<div class="gameboard">
+<div class="tictactoe" id="topLeft">
+    <p>X</p>
+</div>
+<div class="tictactoe" id="topMid">
+    <p>X</p>
+</div>
+<div class="tictactoe" id="topRight">
+    <p>X</p>
+</div>
+<div class="tictactoe" id="midLeft">
+    <p>X</p>
+</div>
+<div class="tictactoe" id="midMid">
+    <p>X</p>
+</div>
+<div class="tictactoe" id="midRight">
+    <p>X</p>
+</div>
+<div class="tictactoe" id="bottomLeft">
+    <p>X</p>
+</div>
+<div class="tictactoe" id="bottomMid">
+    <p>X</p>
+</div>
+<div class="tictactoe" id="bottomRight">
+    <p>X</p>
+</div>
+</div>
+<section><button id="reset" onclick="reset();">Reset</button></section>
+<script src="js/game.js"></script>
+</body>
+</html>

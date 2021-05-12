@@ -1,0 +1,78 @@
+body {
+  background-color: lightsteelblue;
+}
+h1 {
+  color: darkslategrey;
+  text-align: center;
+}
+.gameboard {
+  display: grid;
+  width: 50%;
+  grid-template-columns: auto auto auto;
+  background-color: linen;
+  height:400px;
+  margin: auto;
+}
+.tictactoe {
+  justify-items: center;
+}
+p {
+  visibility: hidden;
+}
+#topLeft {
+  border-bottom: 2px solid black ;
+  border-right: 2px solid black;
+  text-align: center;
+  font-size: xx-large;
+}
+#topMid {
+  border-bottom: 2px solid black ;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  text-align: center;
+  font-size: xx-large;
+}
+#topRight{
+  border-bottom: 2px solid black ;
+  border-left: 2px solid black;
+  text-align: center;
+  font-size: xx-large;
+}
+#midLeft{
+  border-right: 2px solid black;
+  border-bottom: 2px solid black ;
+  border-top: 2px solid black ;
+  text-align: center;
+  font-size: xx-large;
+}
+#midMid{
+  border: 2px solid black;
+  text-align: center;
+  font-size: xx-large;
+}
+#midRight{
+  border-bottom: 2px solid black ;
+  border-left: 2px solid black;
+  border-top: 2px solid black ;
+  text-align: center;
+  font-size: xx-large;
+}
+#bottomLeft{
+  border-top: 2px solid black ;
+  border-right: 2px solid black;
+  text-align: center;
+  font-size: xx-large;
+}
+#bottomMid{
+  border-top: 2px solid black ;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  text-align: center;
+  font-size: xx-large;
+}
+#bottomRight{
+  border-top: 2px solid black ;
+  border-left: 2px solid black;
+  text-align: center;
+  font-size: xx-large;
+}

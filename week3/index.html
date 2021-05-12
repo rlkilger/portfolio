@@ -93,7 +93,53 @@
         <p>.test() returns true if pattern is found - pattern.test('joke'); returns false, pattern.test('joking'); returns true, pattern.test('jokingly'); returns false</p>
         <p>.exec() - returns an array containing the first match found, or null if there aren’t any matches</p>
         <p>pattern.exec('joking'); returns ['joking', index: 0, input: 'joking']</p>
-        <p></p>
+        <p>String pattern - const pattern = /string/</p>
+        <p>Charachter group - any one of the characters inside the brackets - const vowels = /[aeiou]/</p>
+        <p>Dash - any characters between - /[A-Z]/, /[0-9]/</p>
+        <p>Greedy patterns return longest matching string, while lazy paterns(+?) return shortest.</p>
+        <p>Pattern example - const pdf = /.*\.pdf$/; searches for pdf files(if they end in .pdf)</p>
+        <p>String methos examples:</p>
+        <p>'Hello World!'.split(/\s+/) = ['Hello', 'World!']</p>
+        <p>'JavaScript'.match(/[aeiou]/); = ['a'] (Returns first vowel)</p>
+        <p>'JavaScript'.match(/[aeiou]/g); = ['a', 'a', 'i'] (Returns an array of all the vowels)</p>
+        <p>"I'm learning JavaScript".search(/java/i); = 13 (Returns location of first match or -1 if there is no match)</p>
+        <p>'JavaScript'.replace(/[aeiou]/ig,'*'); = 'J*v*Scr*pt' (Returns string with any matches replaced by another string)</p>
+      </section>
+      <section>
+        <h4>Javascript: Novice to Ninja Ch. 6 - The Document Object Model</h4>
+        <p>Assign node to a variable - const body = document.body;</p>
+        <p>.nodeName finds name of element - body.nodeName returns "BODY"</p>
+        <p>document.images - returns a node list of all the images contained in the document</p>
+        <p>document.links - returns a node list of all the "a" elements and "area" elements that have an href attribute</p>
+        <p>Document.anchors - returns a node list of all the "a" elements that have a name attribute</p>
+        <p>document.forms - returns a node list of all the forms in the document</p>
+        <p>Node lists are not arrays, but can be accessed using index notation, have a length, and you can iterate through them.</p>
+        <p>Turn node list into an array - const imageArray = Array.from(document.images); or const imageArray = [...document.images];</p>
+        <p>Can use with CSS pseudo-selectors - const wonderWoman = document.querySelector('li:last-child');</p>
+        <p>Can use querySelector() on other elements - const ul = document.querySelector('ul#roster'); (assigns ul to a variable) then const batman = ul.querySelector('li#bats'); (uses querySelector() on the variable ul)</p>
+        <p>.childNodes - returns list of all child nodes of the node that is referenced including text from white space</p>
+        <p>.children - returns list of element nodes, excludes text</p>
+        <p>Other properties - .firstChild, .lastChild, .parentNode, .nextSibling, .previousSibling</p>
+        <p>.textContent - returns the text content of an element as a string, including "script" and "style" elements(.innerText only returns “human-readable” elements</p>
+        <p>.getAttribute() - returns value of attribute - wonderWoman.getAttribute('id'); or wonderwoman.id</p>
+        <p>.setAttribute() - overwrites all previously set classes - wonderWoman.setAttribute('class', 'hero'); or wonderWoman.class = "hero";</p>
+        <p>Use classList to alter elements with mult classes</p>
+        <p>wonderWoman.classList.contains('hero');</p>
+        <p>wonderWoman.classList.add('warrior');</p>
+        <p>wonderWoman.classList.remove('warrior');</p>
+        <p>.toggle - adds class if element doesn’t have it already, remove class if it does have it, returns true if added and false if removed</p>
+        <p>Function to create an element - function createElement (tag,text) {const el = document.createElement(tag); el.textContent = text; return el} const aquaman = createElement('li','Aquaman');</p>
+        <p>heroes.insertBefore(aquaman,wonderWoman); inserts aquaman before wonderwoman</p>
+        <p>heroes.appendChild(wonderWoman); inserts at end of node list</p>
+        <p>.insertBefore() and .appendChild() can be used to move existing elements in list</p>
+        <p>heroes.removeChild(aquaman); removes element</p>
+        <p>Replace existing node - const h1 = document.getElementById('title'); const oldText = h1.firstChild; const newText = document.createTextNode('Justice League of America'); h1.replaceChild(newText,oldText);</p>
+        <p>The node lists returned by the document.getElementsByClassName() and document.getElementsByTagName() methods are live collections that will update to reflect any changes on the page.</p>
+        <p>Be careful when referring to elements by their index in a collection, as index can change</p>
+        <p>Use .style to change CSS - superman.style.border = "red 2px solid"; adds border</p>
+        <p>CSS property names that with dashes must be written in camelCase - superman.style.backgroundColor = 'blue';</p>
+        <p>.getComputedStyle() - returns style information for element</p>
+        <p>Best practice is to change style by adding classes and adding CSS in stylesheet</p>
       </section>
       <section>
         <h4>Code Example</h4>

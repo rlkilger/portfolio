@@ -1,0 +1,69 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", "Helvetica", sans-serif;
+}
+
+.board {
+  width: 100%;
+  text-align: center;
+  margin: 20px;
+}
+
+.board h1 {
+  color: gray;
+  margin: 30px;
+}
+
+.daBoard {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+}
+
+.square {
+  display: flex;
+  width: 100px;
+  height: 100px;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  font-weight: bold;
+  border: 3px solid gray;
+  transition: background 0.2s ease-in-out;
+}
+
+#square1,
+#square2,
+#square3 {
+  border-top: none;
+}
+
+#square1,
+#square4,
+#square7 {
+  border-left: none;
+}
+
+#square3,
+#square6,
+#square9 {
+  border-right: none;
+}
+
+#square7,
+#square8,
+#square9 {
+  border-bottom: none;
+}
+
+.resetblock {
+  margin: 30px;
+}
+
+.square:hover {
+  background-color: #E9CBC3;
+}

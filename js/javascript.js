@@ -23,6 +23,14 @@ const links = [
   {
     label: "Week 3 Team Activity 2",
     url: "week3/team-activity3/start2.html"
+  },
+  {
+    label: "Week 4 Notes - Forms / Object Oriented Programming / Modern Javascript",
+    url: "week4/index.html"
+  },
+  {
+    label: "Week 4 Team Activity",
+    url: "week4/team-activity4/tictactoe.html"
   }
 ]
 

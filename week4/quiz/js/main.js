@@ -1,8 +1,12 @@
+alert('Welcome to Quiz Ninja!');
+
+
 const quiz = [
   { name: "Superman",realName: "Clark Kent" },
   { name: "Wonder Woman",realName: "Diana Prince" },
   { name: "Batman",realName: "Bruce Wayne" },
 ];
+
 
 const view = {
   score: document.querySelector('#score strong'),
@@ -14,14 +18,9 @@ const view = {
           target.setAttribute(key, attributes[key]);
       }
       target.innerHTML = content;
-  },
-  show(element){
-    element.style.display = 'block';
-  },
-  hide(element){
-    element.style.display = 'none';
   }
 };
+
 
 const game = {
   start(quiz){
@@ -34,7 +33,6 @@ const game = {
       }
       // end of main game loop
       this.gameOver();
-      view.hide(view.start);
   },
   ask(){
     const question = `What is ${this.question.name}'s real name?`;
@@ -56,10 +54,8 @@ const game = {
   },
   gameOver(){
     view.render(view.info,`Game Over, you scored ${this.score} point${this.score !== 1 ? 's' : ''}`);
-    view.show(view.start);
   }
 }
 
-game.start(quiz);
 
-view.start.addEventListener('click', () => game.start(quiz), false);
+game.start(quiz);
