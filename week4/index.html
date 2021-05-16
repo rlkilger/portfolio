@@ -18,8 +18,32 @@
     <main>
       <h3>Week 4 Notes</h3>
       <section>
-        <h4>Javascript: Navice to Ninja Ch. 4 - Forms</h4>
-        
+        <h4>Javascript: Navice to Ninja Ch. 8 - Forms</h4>
+        <p>document.forms - returns array of every form on the page(works the same as this - document.getElementsByTagname('form')) If you need a specific one, select it using index notation</p>
+        <p>To reference a specific one, select it using index notation or the form's name attribute - const form = document.forms.search;(to use name, make sure the form's name is unique</p>
+        <p>Elements - returns an HTML collection of all the elements contained in the form - const [input,button] = form.elements;</p>
+        <p>Select a specific form control by using it's name attribute - const input = form.searchInput; or bracket notation - const input = form['searchInput'];</p>
+        <p>Button type submit will manually submit a form</p>
+        <p>Button type reset will manually reset the fields in a form(not recommended)</p>
+        <p>Focus event occurs when focused on an element - input.addEventListener('focus', () => alert('focused'), false);</p>
+        <p>Blur event occurs when user moves focus away from form element - input.addEventListener('blur', () => alert('blurred'), false);</p>
+        <p>Change event occurs when user moves focus away from form element after changing it - input.addEventListener('change', () => alert('changed'), false);</p>
+        <p>submit - sends the content of the form to the server to be processed, but you can use JavaScript to intercept the form before it’s sent by adding a submit event listener</p>
+        <p>value - retrieves value from inside a field - function search(event) {alert(`You Searched for: ${input.value}`); event.preventDefault();}</p>
+        <p>Link to new form elements - <a href="http://www.sitepoint.com/html5-forms-markup">http://www.sitepoint.com/html5-forms-markup</a></p>
+        <p>"text" is the default input type - "type='text'" is not needed, but it is good practice to include it</p>
+        <p>value - set an initial value to a field</p>
+        <p>checked - set a check or radio as checked by default</p>
+        <p>type='hidden' - not displayed by the browser, but have a 'value' attribute that can contain information that is submitted with the form(viewable in the page's html</p>
+        <p>type='file' - used to upload files</p>
+        <p>It is good practice to use both client-side and server-side validation</p>
+        <p></p>
+      </section>
+      <section>
+        <h4>Code Examples</h4>
+        <a href="search/search.html">Search</a>
+        <br>
+        <a href="hero/hero.html">Hero</a>
       </section>
       <section>
         <h4>Javascript: Navice to Ninja Ch. 12 - Object Oriented Programming</h4>
