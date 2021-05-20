@@ -141,10 +141,24 @@
         <p>.getComputedStyle() - returns style information for element</p>
         <p>Best practice is to change style by adding classes and adding CSS in stylesheet</p>
         <h4>Javascript: Novice to Ninja Ch. 7 - Events</h4>
-        <p></p>
+        <p>Event listeners perform code when a certain action on the page is taken.</p>
+        <p>The first parameter is the type of event, the second is the code to be performed - document.body.addEventListener("click", doSomething);</p>
+        <p>Can be called without a node, would apply to the whole page - addEventListener('click', () => alert('You Clicked!'));</p>
+        <p>.target - returns a reference to the node that fired the event</p>
+        <p>Find the position of where a mouse event occurs:</p>
+        <p>screenX and screenY properties show the number of pixels from the left and top of the screen respectively where the event took place</p>
+        <p>clientX and clientY properties show the number of pixels from the left and top of the client that is being used (usually the browser window)</p>
+        <p>pageX and pageY properties show the number of pixels from the left and top, respectively, where the event took place in thedocument</p>
+        <p>List of events - <a href="https://developer.mozilla.org/en-US/docs/Web/Events">https://developer.mozilla.org/en-US/docs/Web/Events</a></p>
+        <p>Pressing the modifier keys such as Shift, Ctrl, Alt and meta(Cmdon Mac) will fire the keydown and keyup events, but not the keypress event as they don't produce any characters on the screen.</p>
+        <p>Avoid using preventDefault() to change default behavior. Users will expect certain behaviors, and preventing them may cause confusion.</p>
+        <p>When you click on an element, you are clicking on each element that it’s nested inside of</p>
+        <p>Bubbling (default) - the event fires on the element clicked on first, then bubbles up the document tree, firing an event on each parent element until it reaches the root node</p>
+        <p>Capturing - fires an event on the root element, then propagates downwards, firing an event on each child element until it reaches the target element that was clicked on</p>
       </section>
       <section>
         <h4>Code Example</h4>
+        <a href="events/events.html">Events</a><br>
         <a href="quiz/index.html">Hero Name Quiz</a>
       </section>
     </main>
