@@ -1,6 +1,7 @@
 body {
-  font-family: 'Cairo', sans-serif;
-  font-size: 20px;
+  font-family: 'Montserrat', Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 h1,
@@ -24,13 +25,14 @@ h2 {
 
 
 main {
-  width: 800px;
+  width: 1050px;
   max-width: 90%;
   margin: 0 auto;
 }
 
 h3 {
   color: #BE2F29;
+  font-size: 20px;
   border-bottom: 1px solid;
   max-width: 300px;
   padding: 15px 0;
@@ -41,13 +43,26 @@ ul li {
   list-style: circle;
 }
 
+.main-list {
+  line-height: 30px;
+}
+
+.main-list li {
+  list-style: none;
+}
+
+.main-list a + a {
+  border-left: 2px solid #26547C;
+}
+
 a {
   color: #004664;
   text-decoration: none;
+  padding: 0 9px;
 }
 
 a:hover {
-  color: #247BA0;
+  color: #4690af;
 }
 
 
