@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Rebecca Kilger">
+    <meta name="description" content="WWD 330: Web Frontend Development I assignment portfolio">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo&family=Changa:wght@500&display=swap">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/small.css">
+    <title>Rebecca Kilger WDD 330 - Assignment Portfolio</title>  
+  </head>
+  <body>
+    <header>
+      <h1>Rebecca Kilger</h1>
+      <h2>WDD 330 Portfolio</h2>
+    </header>
+    <main>
+      <h3>Week 5 Notes</h3>
+      <section>
+        <h4>Javascript: Navice to Ninja Ch. 10 - Testing and Debugging</h4>
+        <p>Exception - an error that when raised, produces a return value that can be used by the program to handle the error</p>
+        <p>Calling a function that does not exist raises a reference error</p>
+        <p>Stack trace - functions or methods that lead to the point of the error</p>
+        <p>Warning - error that doesn't cause code to crash</p>
+        <p>Strict mode - throws errors for things that can be seen as "poor style" - "use strict;"</p>
+        <p>Strict mode can also be applied inside of a function for use in only that function. That way, if you are working with other developers that aren't using strict mode, it won't throw errors for their code.</p>
+        <p>Linting enforces a style guide - JS Lint, JS Hint, and ES Lint are used to highlight sloppy programming practices and syntax errors</p>
+        <p>Determine browser support for a feature using feature detection by using an if statement to check whether an object or method exists before trying to call the method</p>
+        <p>Calling an method for an object that does not exist would throw an error, an if statement would return false and not execute</p>
+        <p>console.trace() method will log an interactive stack trace in the console</p>
+        <p>Other console methods - <a href="http://www.sitepoint.com/three-little-known-development-console-api-methods/">http://www.sitepoint.com/three-little-known-development-console-api-methods/</a></p>
+        <p>debugger - acts as a breakpoint when written into code</p>
+        <p>Error object can be created using constructor function with error message as parameter - const error = new Error('Oops, something went wrong');</p>
+        <p>Error objects used for specific errors:</p>
+        <p>RangeError - number is outside an allowable range</p>
+        <p>ReferenceError - reference is made to an item that doesn’t exist, like calling a function that hasn't been defined</p>
+        <p>SyntaxError - error in the code’s syntax</p>
+        <p>TypeError - error in the type of value used, like if a string is used when a number is expected</p>
+        <p>Error objects can also be used to create custom error objects - const error = new TypeError('You need to use numbers in this function');</p>
+        <p>You then "throw" the error object when an error occurs - throw new Error('Something has gone badly wrong!');</p>
+        <p>Try block - runs the code inside the block, if an exception occurs it will pass the error object that is thrown onto a catch block. The code inside the catch block will only run if an exception is thrown inside the try block</p>
+        <p>The error object is passed as a parameter to the catch block</p>
+        <p>finally block can be added after a catch block and will be executed after the try or catch block, whether an exception occurred or not</p>
+        <p></p>
+      </section>
+      <section>
+        <h4>Code Example</h4>
+        <a href="quiz/index.html">Hero Name Quiz</a>
+      </section>
+    </main>
+    <footer>
+      <ul class="footer-list">
+        <li>&copy; <span id="year"></span></li>
+        <li>Rebecca Kilger</li>
+      </ul>
+    </footer>
+    <script src="js/javascript.js"></script>
+  </body>
+</html>

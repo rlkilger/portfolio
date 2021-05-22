@@ -1,4 +1,3 @@
-//Chapter 5 Quiz Ninja
 const quiz = [    
   { name: "Superman",realName: "Clark Kent" },    
   { name: "Wonder Woman",realName: "Diana Prince" },    
