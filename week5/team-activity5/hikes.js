@@ -57,12 +57,15 @@ export default class Hikes {
   showHikeList() {
     this.parentElement.innerHTML = "";
     renderHikeList(this.parentElement, this.getAllHikes());
+    this.addHikeListener();
+    this.backButton.classList.add("hidden");
   }
   // show one hike with full details in the parentElement
   showOneHike(hikeName) {
     const hike = this.getHikeByName(hikeName);
     this.parentElement.innerHTML = "";
-    this.parent.appendChild(renderOneHikeFull(hike));
+    this.backButton.classList.remove("hidden");
+    this.parentElement.appendChild(renderOneHikeFull(hike));
   }
   // in order to show the details of a hike ontouchend we will need to attach a listener AFTER the list of hikes has been built. The function below does that.
   addHikeListener() {
@@ -78,7 +81,12 @@ export default class Hikes {
   }
   buildBackButton() {
     const backButton = document.createElement("button");
-
+    backButton.innerHTML = "View All Hikes";
+    backButton.addEventListener("click", () => {
+      this.showHikeList();
+    })
+    backButton.classList.add("hidden");
+    this.parentElement.before(backButton);
     return backButton;
   }
 }
@@ -91,6 +99,7 @@ function renderHikeList(parent, hikes) {
 
 function renderOneHikeLight(hike) {
   const item = document.createElement("li");
+  item.setAttribute('data-name', hike.name);
   item.innerHTML = ` <h2>${hike.name}</h2>
   <div class="image"><img src="${imgBasePath}${hike.imgSrc}" alt="${hike.imgAlt}"></div>
   <div>
@@ -120,11 +129,11 @@ function renderOneHikeFull(hike) {
               <p>${hike.difficulty}</p>
           </div>
           <div>
-              <h3>Description></h3>
+              <h3>Description</h3>
               <p>${hike.description}<p>
           </div>
           <div>
-              <h3>Directions></h3>
+              <h3>Directions</h3>
               <p>${hike.directions}<p>
           </div>
   </div>`;
