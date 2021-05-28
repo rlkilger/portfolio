@@ -2,15 +2,26 @@ import { ls } from "./ls.js";
 
 // Select ul
 const list = document.querySelector('.todo-list');
+// select form
 const todoForm = document.querySelector('.todo-form');
+// select input
 const todoInput = document.querySelector('.todo-input');
+// select all button
 const all = document.querySelector('.all');
+// select active button
 const active = document.querySelector('.active');
+// select cpmpleted button
 const completed = document.querySelector('.completed');
+// select task counter span
 const count = document.querySelector('.count')
 
 // to-do array
-let toDoList = [];
+let toDoList = ls.getFromLocalStorage('toDoList');
+
+
+window.addEventListener('load', () => {
+  showTodos(toDoList);
+});
 
 
 // add event listener for adding task
@@ -35,6 +46,7 @@ completed.addEventListener('click', function(event) {
 });
 
 
+
 // function to add task
 function addTodo(task) {
   // check if task is empty
@@ -48,7 +60,7 @@ function addTodo(task) {
     // add todo object to toDoList
     toDoList.push(todo);
     // call addToLocalStorage function to save task to local storage
-    ls.addToLocalStorage(toDoList);
+    ls.addToLocalStorage('ToDoList', toDoList);
     showTodos(toDoList);
 
     // clear input value
@@ -62,15 +74,19 @@ function renderTodo(task) {
   li.setAttribute('class', 'task');
   li.setAttribute('data-key', task.id);
   let checked = null;
+  let counter = 0;
   if (task.completed === true) {
     li.classList.add('checked');
     checked = 'checked';
+  } else {
+    counter++;
   }
   li.innerHTML = `
     <input type="checkbox" class="checkbox" id="${task.id}" ${checked}>${task.name}
     <button class="delete-button">&#x2715;</button>`;
   // add li element to the ul element
   list.append(li);
+  return counter;
 }
 
 
@@ -78,12 +94,12 @@ function renderTodo(task) {
 function showTodos(toDoList) {
   // clear unordered list
   list.innerHTML = '';
-  let counter = 0;
+  let taskcounter = 0;
   // for each task in toDoList
   toDoList.forEach(function(task) {
-    renderTodo(task);
+    taskcounter += renderTodo(task);
   });
-  count.innerHTML = `${counter} tasks left`;
+  count.innerHTML = `${taskcounter} tasks left`;
 }
 
 // function to display active tasks
@@ -137,7 +153,7 @@ function toggle(id) {
       task.completed = !task.completed;
     }
   });
-  ls.addToLocalStorage(toDoList);
+  ls.addToLocalStorage('toDoList', toDoList);
   // call showTodos to display toDoList each time they are updated
   showTodos(toDoList);
 }
@@ -148,11 +164,7 @@ function deleteTodo(id) {
   toDoList = toDoList.filter(function(task) {
     return task.id != id;
   });
-  ls.addToLocalStorage(toDoList);
+  ls.addToLocalStorage('toDoList', toDoList);
   // call showTodos to display toDoList each time they are updated
   showTodos(toDoList);
 }
-
-
-// get everything from localStorage
-ls.getFromLocalStorage(toDoList);

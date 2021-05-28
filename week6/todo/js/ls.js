@@ -1,19 +1,19 @@
 export const ls = {
 
   // function to add tasks to local storage
-  addToLocalStorage: function (toDoList) {
+  addToLocalStorage: function (name, item) {
     // convert the array to string and store it.
-    localStorage.setItem('toDoList', JSON.stringify(toDoList));
+    window.localStorage.setItem(name, JSON.stringify(item));
   },
 
 
   // function to retrieve data from storage
-  getFromLocalStorage: function (toDoList) {
-    const storage = localStorage.getItem('toDoList');
+  getFromLocalStorage: function (name) {
+    const storage = window.localStorage.getItem(name);
     // if storage exists
     if (storage) {
       // converts back to array and store it in toDoList array
-      toDoList = JSON.parse(storage);
+      return JSON.parse(storage);
     }
   }
 }
