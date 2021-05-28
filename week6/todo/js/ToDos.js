@@ -16,7 +16,9 @@ const completed = document.querySelector('.completed');
 const count = document.querySelector('.count')
 
 // to-do array
-let toDoList = ls.getFromLocalStorage('toDoList');
+let toDoList = []
+
+toDoList = ls.getFromLocalStorage('toDoList');
 
 
 window.addEventListener('load', () => {
@@ -91,23 +93,23 @@ function renderTodo(task) {
 
 
 // function to display all tasks
-function showTodos(toDoList) {
+function showTodos(toDos) {
   // clear unordered list
   list.innerHTML = '';
   let taskcounter = 0;
   // for each task in toDoList
-  toDoList.forEach(function(task) {
-    taskcounter += renderTodo(task);
+  toDos.forEach(function(task) {
+  taskcounter += renderTodo(task);
   });
   count.innerHTML = `${taskcounter} tasks left`;
 }
 
 // function to display active tasks
-function showActive(toDoList) {
+function showActive(toDos) {
   // clear unordered list
   list.innerHTML = '';
   // for each task in toDoList
-  toDoList.forEach(function(task) {
+  toDos.forEach(function(task) {
     // check if task is not completed
     if (!task.completed) {
       renderTodo(task);
@@ -116,11 +118,11 @@ function showActive(toDoList) {
 }
 
 // function to display completed tasks
-function showCompleted(toDoList) {
+function showCompleted(toDos) {
   // clear unordered list
   list.innerHTML = '';
   // for each task in toDoList
-  toDoList.forEach(function(task) {
+  toDos.forEach(function(task) {
     // check if task is completed
     if (task.completed) {
       renderTodo(task);
