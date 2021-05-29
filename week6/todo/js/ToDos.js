@@ -5,7 +5,7 @@ const list = document.querySelector('.todo-list');
 // select form
 const todoForm = document.querySelector('.todo-form');
 // select input
-const todoInput = document.querySelector('.todo-input');
+const todoInput = document.querySelector('#todo-input');
 // select all button
 const all = document.querySelector('.all');
 // select active button
@@ -13,7 +13,7 @@ const active = document.querySelector('.active');
 // select cpmpleted button
 const completed = document.querySelector('.completed');
 // select task counter span
-const count = document.querySelector('.count')
+const count = document.querySelector('.count');
 
 // to-do array
 let toDoList = [];
@@ -84,7 +84,7 @@ function renderTodo(task) {
     counter++;
   }
   li.innerHTML = `
-    <input type="checkbox" class="checkbox" id="${task.id}" ${checked}>${task.name}
+    <input type="checkbox" class="checkbox" id="${task.id}" ${checked}><label for="${task.id}">${task.name}</label>
     <button class="delete-button">&#x2715;</button>`;
   // add li element to the ul element
   list.append(li);
@@ -94,6 +94,9 @@ function renderTodo(task) {
 
 // function to display all tasks
 function showTodos(toDos) {
+  active.removeAttribute('id');
+  completed.removeAttribute('id');
+  all.setAttribute('id', 'selected');
   // clear unordered list
   list.innerHTML = '';
   let taskcounter = 0;
@@ -106,6 +109,9 @@ function showTodos(toDos) {
 
 // function to display active tasks
 function showActive(toDos) {
+  completed.removeAttribute('id');
+  all.removeAttribute('id');
+  active.setAttribute('id', 'selected');
   // clear unordered list
   list.innerHTML = '';
   // for each task in toDoList
@@ -119,6 +125,9 @@ function showActive(toDos) {
 
 // function to display completed tasks
 function showCompleted(toDos) {
+  active.removeAttribute('id');
+  all.removeAttribute('id');
+  completed.setAttribute('id', 'selected');
   // clear unordered list
   list.innerHTML = '';
   // for each task in toDoList

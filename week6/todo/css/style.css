@@ -1,4 +1,4 @@
-/* https://coolors.co/628395-c1cfd7-e0e0e0-ebebeb-dae2e7-d6d6d6 */
+/* https://coolors.co/628395-90a9b6-c1cfd7-dae2e7-d6d6d6-e0e0e0-ebebeb */
 
 html {
   height: 100%;
@@ -62,6 +62,10 @@ ul {
   text-decoration: line-through;
 }
 
+#selected {
+  background-color: #90A9B6;
+}
+
 form,
 .button-div {
   display: flex;
@@ -74,7 +78,11 @@ form,
   margin-right: 10px;
 }
 
-.todo-input {
+#input-label {
+  display: none;
+}
+
+#todo-input {
   padding: 7px;
   width: 85%;
   margin-right: 10px;
@@ -87,7 +95,8 @@ button {
   margin: 0;
 }
 
-button:hover {
+button:hover,
+#selected:hover {
   background-color: #DAE2E7;
 }
 
