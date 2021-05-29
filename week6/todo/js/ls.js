@@ -11,6 +11,6 @@ export const ls = {
   getFromLocalStorage: function (name) {
     const storage = window.localStorage.getItem(name);
     // if storage exists
-    return (storage !== null) ? JSON.parse(storage) : null;
+    return (storage !== null) ? JSON.parse(storage) : [];
   }
 }

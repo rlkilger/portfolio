@@ -99,8 +99,8 @@ function showTodos(toDos) {
   let taskcounter = 0;
   // for each task in toDoList
   toDos.forEach(function(task) {
-  taskcounter += renderTodo(task);
-  });
+    taskcounter += renderTodo(task);
+    });
   count.innerHTML = `${taskcounter} tasks left`;
 }
 
