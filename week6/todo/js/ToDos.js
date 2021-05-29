@@ -16,7 +16,7 @@ const completed = document.querySelector('.completed');
 const count = document.querySelector('.count')
 
 // to-do array
-let toDoList = []
+let toDoList = [];
 
 toDoList = ls.getFromLocalStorage('toDoList');
 
@@ -62,7 +62,7 @@ function addTodo(task) {
     // add todo object to toDoList
     toDoList.push(todo);
     // call addToLocalStorage function to save task to local storage
-    ls.addToLocalStorage('ToDoList', toDoList);
+    ls.addToLocalStorage('toDoList', toDoList);
     showTodos(toDoList);
 
     // clear input value
@@ -98,11 +98,9 @@ function showTodos(toDos) {
   list.innerHTML = '';
   let taskcounter = 0;
   // for each task in toDoList
-  if (toDos.length > 0) {
-    toDos.forEach(function(task) {
-    taskcounter += renderTodo(task);
-    });
-  }
+  toDos.forEach(function(task) {
+  taskcounter += renderTodo(task);
+  });
   count.innerHTML = `${taskcounter} tasks left`;
 }
 

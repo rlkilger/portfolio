@@ -11,9 +11,6 @@ export const ls = {
   getFromLocalStorage: function (name) {
     const storage = window.localStorage.getItem(name);
     // if storage exists
-    if (storage) {
-      // converts back to array and store it in toDoList array
-      return JSON.parse(storage);
-    }
+    return (storage !== null) ? JSON.parse(storage) : null;
   }
 }
