@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Rebecca Kilger">
+    <meta name="description" content="WWD 330: Web Frontend Development I assignment portfolio">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo&family=Changa:wght@500&display=swap">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/small.css">
+    <title>Rebecca Kilger WDD 330 - Assignment Portfolio</title>  
+  </head>
+  <body>
+    <header>
+      <h1>Rebecca Kilger</h1>
+      <h2>WDD 330 Portfolio</h2>
+    </header>
+    <main>
+      <h3>Week 7 Notes</h3>
+      <section>
+        <h4>Javascript: Novice to Ninja Ch. 11 - Further Functions</h4>
+        <p>A function's length property returns how many parameters it has.</p>
+        <p>call() method can be used to set the value of this inside a function to an object that is provided as the first argument - function sayHello(){return `Hello, my name is ${ this.name }`;} clark = {name:Clark}; sayhello.call(clark) returns "Hello, my name is Clark"</p>
+        <p>Additional parameters go after first parameter that is defining the object - function sayHello(greeting='Hello'){return `${ greeting }, my name is ${ this.name }`;} sayHello.call(clark, "Hi") returns "Hi, my name is Clark"</p>
+        <p>You can add properties to a function much like you can to an object - square.description = 'Squares a number that is provided as an argument'</p>
+        <p>Can store results of a function in a cache property to save from recomputing results - function square(x){square.cache = square.cache || {}; if (!square.cache[x]) {square.cache[x] = x*x;} return square.cache[x]} square.cache; returns {"3": 9, "-11": 121}</p>
+        <p>Immediately Invoked Function Expression – or IIFE (pronounced 'iffy') - anonymous function that is invoked as soon as it’s defined - (function(){const temp = 'World'; console.log(`Hello ${temp}`);})(); immediately returns "Hello World</p>
+        <p>Creating a variable inside an IIFE makes it temporary - let a = 1; let b = 2; (()=>{const temp = a; a = b; b = temp;})(); - this can be used to switch the values of a and b, and temp will not exist after the function executes</p>
+        <p>The above example is not the most efficient way to swap values - let [a,b] = [1,2]; [a,b] = [b,a];</p>
+        <p>An IIFE can be used to set up any initialization code that there’ll be no need for again. Because the code is only run once, there’s no need to create any reusable, named functions, and all the variables will also be temporary.</p>
+        <p>This function prints a welcome message to the console - (function() {cons const date = new Date(),today = days[date.getDay()]; console.log(`Welcome back ${name}. Today is ${today}`);})(); - immediately prints 'Welcome back Peter Parker. Today is Tuesday' to the console</p>
+        <p>All of these features can also be acheived by placing the code inside a block ( {--code goes here--} )</p>
+        <p>IIFEs are useful when wanting to use strict mode - (function() {'use strict'; // All your code would go inside this function})();</p>
+        <p>Functions can redefine themselves - function party(){console.log('Wow this is amazing!'); party = function(){console.log('Been there, got the T-Shirt');}} - first will log 'Wow this is amazing!', then it will log 'Been there, got the T-Shirt'</p>
+        <p>If the function is assigned to a new variable, that variable will always display the first message and will update the original function</p>
+        <p>Any properties assigned to the function before it was redefined will be lost</p>
+        <p>Recursive function - calls itself inside the function until a certain condition is met.</p>
+        <p></p>
+        <h4>Javascript: Novice to Ninja Ch. 13 - AJAX</h4>
+        <p>fetch() - fetch('https://example.com/data') .then( // code that handles the response ) .catch( // code that runs if the server returns an error )</p>
+        <p>Response objects have properties and methods that help to process the response</p>
+        <p>ok property checks to see if response is successful</p>
+        <p>Can use an if statement to display status and see if request was successful</p>
+        <p>headers – Headers object containing any headers associated with the response</p>
+        <p>url – string containing the URL of response</p>
+        <p>redirected – boolean value that specifies if the response is the result of a redirect</p>
+        <p>type – string value of 'basic', 'cors', 'error' or 'opaque' - </p>
+      </section>
+      <section>
+        <h4>Code Example</h4>
+        <a href="quiz/index.html">Hero Name Quiz</a>
+      </section>
+    </main>
+    <footer>
+      <ul class="footer-list">
+        <li>&copy; <span id="year"></span></li>
+        <li>Rebecca Kilger</li>
+      </ul>
+    </footer>
+    <script src="js/javascript.js"></script>
+  </body>
+</html>
