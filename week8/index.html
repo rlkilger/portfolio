@@ -19,7 +19,41 @@
       <h3>Week 8 Notes</h3>
       <section>
         <h4>HTML5 & CSS3 for the Real World - CSS3 Transforms and Transitions</h4>
-        <p></p>
+        <p>Transform - lets you lets you translate, rotate, scale, and/or skew elements</p>
+        <p>Transforms are applied in the order provided.</p>
+        <p>Translation - functions that allow you to move elements left, right, up, or down</p>
+        <p>Behaves similarly to position: relative; declare top and left, move elements up and down or left and right along the x and y axes - transform: translate(45px, -45px);</p>
+        <p>Can use translateX or translateY</p>
+        <p>Transforms don’t work on inline elements</p>
+        <p>scale(x,y) - scales an element horizontally then vertically(if one value is provided, it is used for both x and y); grows and shrinks from center, so center stays the same.</p>
+        <p>transform: scale(2) - doubles font size; transform: scale(0.5) - cuts size in half</p>
+        <p>Can use scaleX or scaleY</p>
+        <p>When using transform to change element in different ways(scale and translate), put them in the same transform property - transform: translateX(40px) scale(1.5);</p>
+        <p>rotate() - rotates an element around the point of origin(default is center) by a specified angle value(positive moves clockwise, negative moves counter-clockwise) - transform: rotate(10deg);</p>
+        <p>skew(x,y) - skews text along the x and y axes(if one value given, it occurs on the x axis)</p>
+        <p>transform-origin - changes the point of origin(default is center - 50% 50%)</p>
+        <p>Transitions allow the values of CSS properties to change over time, essentially providing simple animations</p>
+        <p>Transitions work well when used with Javascript</p>
+        <p>Transition is declared in the default or originating state, the effect you want it to take is in the changing state(for example, hover)</p>
+        <p>transition-property - defines the CSS properties to be transitioned, with all for all properties being the default</p>
+        <p>If you want to transition more than one property, but not all, separate with comma</p>
+        <p>List of properties that can be animated - <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties">https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties</a></p>
+        <p>transition-duration - how long the transition will take to complete the effect</p>
+        <p>transition-timing-function - ease, linear, ease-in, ease-out, or ease-in-out</p>
+        <p>ease - default; has a slow start, then it speeds up, and ends slowly</p>
+        <p>ease-in-out - similar to ease, but accelerates more sharply at the beginning</p>
+        <p>linear - animates at a constant speed</p>
+        <p>ease-in - slow to start but gains speed, then stops abruptly</p>
+        <p>ease-out - starts at full speed, then slows progressively</p>
+        <p>transition-delay - delays when the transition begins, useful for hovers to ensure that the user is intentionally hovering over the element</p>
+        <p>Negative delays start partway through the transition process</p>
+        <p>Transition shorthand - in the originating state, list them in order of property, duration, timing function, then delay, separated by a space - transition: transform 0.2s ease-out 50ms;</p>
+        <p>When applying it to 2 properties, if listing each effect separately, separate them by comma - transition-property: transform, color; transition-duration: 0.2s, 0.1s; transition-timing-function: ease-out, linear; transition-delay: 50ms;</p>
+        <p>When listing them using shorthand, list effect together, separate properties by comma - transition: transform 0.2s ease-out 50ms, color 0.1s linear 50ms;</p>
+      </section>
+      <section>
+        <h4>Code Example</h4>
+        <a href="example/index.html">Transforms and Transitions</a>
       </section>
     </main>
     <footer>

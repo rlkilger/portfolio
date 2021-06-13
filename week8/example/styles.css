@@ -1,0 +1,117 @@
+body {
+  font-family: 'Montserrat', Helvetica, sans-serif;
+  font-size: 16px;
+  text-align: center;
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Changa", sans-serif;
+}
+
+h1,
+h2 {
+  margin: 0;
+}
+
+
+header {
+  background-color: #00121B;
+  color: white;
+  padding: 40px 0;
+  text-align: center;
+}
+
+main {
+  width: 1050px;
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 70px 0;
+}
+
+h3 {
+  color: #BE2F29;
+  font-size: 20px;
+  margin: 30px 0;
+}
+
+p {
+  font-size: 20px;
+}
+
+div p {
+  border: 1px solid #cccccc;
+  box-shadow: 5px 3px 3px 3px #cccccc;
+  max-width: 150px;
+  margin: 30px auto;
+  padding: 50px;
+}
+
+
+.translate:hover {
+  transform: translate(50px, -20px);
+}
+
+.scale:hover {
+  transform: scale(1.5);
+}
+
+.rotate:hover {
+  transform: rotate(30deg);
+}
+
+.skew:hover {
+  transform: skew(20deg, 10deg);
+}
+
+
+.ease {
+  transition: transform 2s ease;
+}
+
+.ease-in-out {
+    transition: transform 2s ease-in-out;
+}
+
+.linear {
+  transition: transform 2s linear;
+}
+
+.ease-in {
+  transition: transform 2s ease-in;
+}
+
+.ease-out {
+  transition: transform 2s ease-out;
+}
+
+.delay {
+  transition: transform 1s ease .5s;
+}
+
+.negative {
+  transition: transform 2s linear -1s;
+}
+
+.ease:hover,
+.ease-in-out:hover,
+.linear:hover,
+.ease-in:hover,
+.ease-out:hover,
+.delay:hover,
+.negative:hover { 
+  transform: scale(1.5);
+}
+
+
+
+@media only screen and (min-width: 800px) {
+
+  section div {
+    display:flex;
+    justify-content: space-around;
+  }
+
+}
