@@ -1,0 +1,85 @@
+body {
+  font-family: 'Cairo', sans-serif;
+  font-size: 20px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Changa", sans-serif;
+}
+
+
+header {
+  background-color: #00121B;
+  color: white;
+  padding: 40px 0;
+  text-align: center;
+}
+
+h1,
+h2 {
+  margin: 0;
+}
+
+
+main {
+  width: 800px;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+h3 {
+  color: #BE2F29;
+  border-bottom: 1px solid;
+  max-width: 300px;
+  padding: 15px 0;
+  margin: 40px 0 20px;
+}
+
+section {
+  margin: 50px 0;
+}
+
+ul li {
+  list-style: circle;
+}
+
+a {
+  color: #004664;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #247BA0;
+}
+
+img {
+  display: block;
+  width: 400px;
+  max-width: 100%;
+  padding-top: 20px;
+}
+
+
+footer {
+  background-color: #00121B;
+  color: white;
+  margin-top: 50px;
+}
+
+footer ul {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+  margin-bottom: 0;
+}
+
+footer li {
+  list-style: none;
+  padding: 0 6px;
+}
+
+footer li + li {
+  border-left: 2px solid;
+}
