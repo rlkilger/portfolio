@@ -1,0 +1,109 @@
+body {
+  font-family: 'Montserrat', Helvetica, sans-serif;
+  font-size: 16px;
+  padding: 0;
+  margin : 0 auto;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Changa", sans-serif;
+}
+
+h1,
+h2 {
+  margin: 0;
+}
+
+header {
+  background-color: #00121B;
+  color: white;
+  padding: 40px 0;
+  text-align: center;
+}
+
+main {
+  width: 1050px;
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 70px 0;
+}
+
+h3 {
+  color: #BE2F29;
+  font-size: 20px;
+  border-bottom: 1px solid;
+  max-width: 400px;
+  padding-bottom: 15px;
+  margin: 30px 0;
+}
+
+input[type=email]{
+  -webkit-appearance: none;
+  appearance: none;
+
+  width: 300px;
+  border: 1px solid #333;
+  margin: 0;
+  padding: 5px;
+
+  font-family: inherit;
+  font-size: 90%;
+
+  box-sizing: border-box;
+}
+
+/* This is our style for the invalid fields */
+input:invalid{
+  border-color: #900;
+  background-color: #FDD;
+}
+
+input:focus:invalid {
+  outline: none;
+}
+
+/* This is the style of our error messages */
+.error {
+  width  : 100%;
+  padding: 0;
+
+  font-size: 80%;
+  color: white;
+  background-color: #900;
+  border-radius: 0 0 5px 5px;
+
+  box-sizing: border-box;
+}
+
+.error.active {
+  padding: 0.3em;
+}
+
+
+button {
+  display: block;
+  padding: 5px 10px;
+}
+
+footer {
+  background-color: #00121B;
+  color: white;
+}
+
+footer ul {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+  margin: 0;
+}
+
+footer li {
+  list-style: none;
+  padding: 0 6px;
+}
+
+footer li + li {
+  border-left: 2px solid;
+}

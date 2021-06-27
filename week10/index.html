@@ -16,10 +16,32 @@
       <h2>WDD 330 Portfolio</h2>
     </header>
     <main>
-      <h3>Week 9 Notes</h3>
+      <h3>Week 10 Notes</h3>
       <section>
-        <h4>Javascript: Novice to Ninja Ch. 9 - The Window Object</h4>
+        <h4>MDN: Validating forms</h4>
+        <p>Validation done in browser is client-side validation, validation done by server is server-side validation.</p>
+        <p>client-side validation should not be considered an exhaustive security measure and should always be accompanied by server-side validation.</p>
+        <p>Three main reasons for client-side validation: making sure we're getting the right data in the right format, protecting users' data, and protecting ourselves from malicious users.</p>
+        <p>Two types of client-side validation: built-in form validation and javascript validation</p>
+        <p>Bulit-in form validation: required, minlength, maxlength, min, max, type, and pattern</p>
         <p></p>
+      </section>
+      <section>
+        <p>
+          <a href="example1/index.html" title="Week 10 example 1">Built-in form validation example</a>
+        </p>
+        <p>
+          <a href="example2/index.html" title="Week 10 example 2">Javascript validation example</a>
+        </p>
+      </section>
+      <section>
+        <h4>MDN: Using Fetch</h4>
+        <p>Basic fetch request - fetch('http://example.com/movies.json') .then(response => response.json()) .then(data => console.log(data)); - This returns the response, not the actual object.</p>
+        <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch" title="More info on fetch">More info on fetch()</a></p>
+        <p>fetch() can accept a second parameter</p>
+        <p>Upload JSON data using method: 'POST'</p>
+        <p>Files can be uploaded using an HTML 'input type="file"' input element, FormData() and fetch().</p>
+        <p>Multiple files can be uploaded using an HTML 'input type="file" multiple' input element</p>
       </section>
     </main>
     <footer>
