@@ -1,0 +1,32 @@
+@media only screen and (min-width: 550px) {
+  .full-meal {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    max-width: 500px;
+    height: 85%;
+    border-radius: 15px;
+    padding: 0 40px 30px;
+  }
+
+  .meal-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+
+  .meal-list li {
+    max-width: 250px;
+    background-color: #F2F3F4;
+    padding: 10px;
+    margin: 10px;
+  }
+
+  .meal-list h2 {
+    height: 40px;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+}
