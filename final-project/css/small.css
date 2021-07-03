@@ -47,6 +47,7 @@ select {
   color: white;
   border: none;
   padding: 8px 15px;
+  transition: background-color 0.2s ease;
 }
 
 #search-button:hover {
@@ -70,6 +71,10 @@ li {
   margin: 0;
 }
 
+.meal-list h2 {
+  font-size: 18px;
+}
+
 .meal-details {
   padding-top: 0;
 }
@@ -90,6 +95,7 @@ ul li {
 a {
   color: #107896;
   text-decoration: none;
+  transition: color .2s ease-out;
 }
 
 a:hover {
@@ -129,6 +135,7 @@ a:hover {
   right: 1%;
   background-color: #F2F3F4;
   color: #373D3F;
+  transition: color .2s ease-out;
   border: none;
 }
 
@@ -149,4 +156,16 @@ a:hover {
   width: 100%;
   margin: 0 auto;
   box-shadow: #9DA7AA 5px 5px 7px;
+}
+
+.background {
+  background-color: black;
+  position: fixed;
+  z-index: 0;
+  opacity: 0.7;
+  left: 0;
+  top: 0;
+  transform: translate(0, 0);
+  width: 100%;
+  height: 100%;
 }

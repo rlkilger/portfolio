@@ -48,9 +48,16 @@ function getMealsByCategory(category) {
 
 function getMealByID(event) {
   let mealItem = event.target.parentElement.parentElement;
+  let mealListItem = event.target.parentElement;
+  let mealDataSet = mealItem.dataset.id;
+  if (mealDataSet == undefined) {
+    mealDataSet = mealListItem.dataset.id;
+  }
+  console.log(mealDataSet);
+  
   const mealByIDURL = "https://www.themealdb.com/api/json/v1/1/lookup.php?i=";
   
-  fetch(mealByIDURL + mealItem.dataset.id)
+  fetch(mealByIDURL + mealDataSet)
     .then(function(response) {
         return response.json();
     })
@@ -63,16 +70,20 @@ function getMealByID(event) {
       console.log(fullMeal);
       fullMeal.innerHTML = renderMealFull(meal);
 
+      const background = document.querySelector(".background");
+      background.classList.remove('hidden');
       const closeButton = document.querySelector(".close-button");
       closeButton.onclick = (event) => {
         event.preventDefault();
         fullMeal.classList.add('hidden');
+        background.classList.add('hidden');
       };
 
     })
     .catch(function(error) {
       console.log(error);
     });
+  
 }
     
 
