@@ -13,9 +13,11 @@ fetch("https://www.themealdb.com/api/json/v1/1/categories.php")
       categoryList.innerHTML = renderCategoryList(categories);
 
       const search = document.querySelector('#search-button');
+      const message = document.querySelector('.message');
       search.onclick = (event) => {
         event.preventDefault();
         getMealsByCategory(categoryList.value);
+        message.classList.add("hidden");
       };
       
     })
@@ -47,17 +49,10 @@ function getMealsByCategory(category) {
 
 
 function getMealByID(event) {
-  let mealItem = event.target.parentElement.parentElement;
-  let mealListItem = event.target.parentElement;
-  let mealDataSet = mealItem.dataset.id;
-  if (mealDataSet == undefined) {
-    mealDataSet = mealListItem.dataset.id;
-  }
-  console.log(mealDataSet);
-  
   const mealByIDURL = "https://www.themealdb.com/api/json/v1/1/lookup.php?i=";
+  let mealListItem = event.target.parentElement;
   
-  fetch(mealByIDURL + mealDataSet)
+  fetch(mealByIDURL + mealListItem.dataset.id)
     .then(function(response) {
         return response.json();
     })
@@ -72,13 +67,19 @@ function getMealByID(event) {
 
       const background = document.querySelector(".background");
       background.classList.remove('hidden');
-      const closeButton = document.querySelector(".close-button");
-      closeButton.onclick = (event) => {
-        event.preventDefault();
-        fullMeal.classList.add('hidden');
-        background.classList.add('hidden');
-      };
 
+      const body = document.querySelector("body");
+      body.classList.add('no-scroll');
+      const closeButton = document.querySelector(".close-button");
+
+      document.addEventListener("click", function(event) {
+        if (event.target.matches(".close-button") || !event.target.closest(".full-meal")) {
+          event.preventDefault();
+          fullMeal.classList.add('hidden');
+          background.classList.add('hidden');
+          body.classList.remove('no-scroll');
+        }
+      })
     })
     .catch(function(error) {
       console.log(error);
@@ -111,7 +112,7 @@ function renderMealList(meals) {
 function renderMealLight(meal) {
   let item = `<li data-id="${meal.idMeal}">`;
   item += ` <h2>${meal.strMeal}</h2>`;
-  item += `<div class="image"><img src="${meal.strMealThumb}" alt="${meal.strMeal} photo"></div>`;
+  item += `<img src="${meal.strMealThumb}" alt="${meal.strMeal} photo">`;
   item += `</li>`;
   return item;
 }

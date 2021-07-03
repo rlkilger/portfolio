@@ -1,8 +1,8 @@
 body {
   font-family: 'Cairo', sans-serif;
   color: #373D3F;
-  width: 1200px;
-  max-width: 90%;
+  width: 450px;
+  max-width: 100%;
   margin: 0 auto;
 }
 
@@ -14,27 +14,31 @@ h3 {
 
 
 main {
+  position: relative;
   background-color: white;
-  padding: 20px;
+  padding: 10px;
   margin: 30px 0;
 }
 
 h1 {
+  background: url(../images/food.jpg) no-repeat center / auto 100%;
   font-size: 70px;
   font-weight: bold;
   text-align: center;
-  margin-top: 10px;
+  margin: 0 0 30px;
+  padding: 70px 0;
 }
 
 form {
   text-align: center;
   border-bottom: 1px solid #373D3F;
   padding-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 form label {
   display: block;
-  margin: 10px 0 20px;
+  margin: 0 0 20px;
 }
 
 select {
@@ -43,7 +47,7 @@ select {
 }
 
 #search-button {
-  background-color: #107896;
+  background-color: #D33822;
   color: white;
   border: none;
   padding: 8px 15px;
@@ -51,7 +55,7 @@ select {
 }
 
 #search-button:hover {
-  background-color: #15A4CB;
+  background-color: #E1633D;
 }
 
 ul {
@@ -71,8 +75,17 @@ li {
   margin: 0;
 }
 
+.meal-list li {
+  background-color: #EFF3FB;
+  padding: 10px;
+  margin: 20px 10px;
+  transition: transform .3s ease-out;
+}
+
 .meal-list h2 {
   font-size: 18px;
+  height: 45px;
+  text-align: center;
 }
 
 .meal-details {
@@ -93,13 +106,13 @@ ul li {
 }
 
 a {
-  color: #107896;
+  color: #D33822;
   text-decoration: none;
   transition: color .2s ease-out;
 }
 
 a:hover {
-  color: #15A4CB;
+  color: #E1633D;
 }
 
 .link {
@@ -111,18 +124,17 @@ a:hover {
 }
 
 .full-meal {
-  background-color: #F2F3F4;
+  background-color: #EFF3FB;
   color: #373D3F;
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   left: 0;
   top: 0;
   transform: translate(0, 0);
-  max-width: 500px;
   height: 98%;
   overflow-y: scroll;
   margin: 0 auto;
-  padding: 0 10px 20px;
+  padding: 0 20px 20px;
 }
 
 .close {
@@ -133,7 +145,7 @@ a:hover {
   font-size: 40px;
   position: absolute;
   right: 1%;
-  background-color: #F2F3F4;
+  background-color: #EFF3FB;
   color: #373D3F;
   transition: color .2s ease-out;
   border: none;
@@ -144,8 +156,7 @@ a:hover {
 }
 
 .meal-heading {
-  width: 300px;
-  max-width: 90%;
+  max-width: 85%;
   margin: 0;
   padding-bottom: 10px;
   border-bottom: 1px solid;
@@ -161,11 +172,25 @@ a:hover {
 .background {
   background-color: black;
   position: fixed;
-  z-index: 0;
+  z-index: 1;
   opacity: 0.7;
   left: 0;
   top: 0;
   transform: translate(0, 0);
   width: 100%;
   height: 100%;
+  overflow-y: hidden;
+}
+
+.message {
+  font-size: 18px;
+  background-color: #EFF3FB;
+  text-align: center;
+  width: 250px;
+  padding: 10px;
+  margin: 40px auto;
+}
+
+.no-scroll {
+  overflow-y: hidden;
 }

@@ -1,0 +1,9 @@
+@media only screen and (min-width: 950px) {
+  .meal-list {
+    grid-template-columns: repeat(3, 300px);
+  }
+
+  h1 {
+    background-size: 100%;
+  }
+}
