@@ -1,9 +1,12 @@
+/* Colors - https://coolors.co/373d3f-5f6a6d-9da7aa-eff3fb-d33822-e1633d */
+
 body {
   font-family: 'Cairo', sans-serif;
   color: #373D3F;
-  width: 450px;
-  max-width: 100%;
   margin: 0 auto;
+  padding: 0;
+  position: relative;
+  min-height: 100vh;
 }
 
 h1,
@@ -16,8 +19,10 @@ h3 {
 main {
   position: relative;
   background-color: white;
+  width: 450px;
+  max-width: 95%;
   padding: 10px;
-  margin: 30px 0;
+  margin: 0 auto;
 }
 
 h1 {
@@ -43,15 +48,17 @@ form label {
 
 select {
   width: 200px;
-  margin-right: 10px;
+  margin-right: 15px;
+  margin-bottom: 10px;
 }
 
 #search-button {
   background-color: #D33822;
   color: white;
   border: none;
-  padding: 8px 15px;
+  padding: 10px 20px;
   transition: background-color 0.2s ease;
+  border-radius: 15px;
 }
 
 #search-button:hover {
@@ -72,7 +79,7 @@ li {
 }
 
 .meal-list {
-  margin: 0;
+  margin: 0 0 90px;
 }
 
 .meal-list li {
@@ -124,7 +131,7 @@ a:hover {
 }
 
 .full-meal {
-  background-color: #EFF3FB;
+  background-color: white;
   color: #373D3F;
   position: fixed;
   z-index: 2;
@@ -145,7 +152,7 @@ a:hover {
   font-size: 40px;
   position: absolute;
   right: 1%;
-  background-color: #EFF3FB;
+  background-color: white;
   color: #373D3F;
   transition: color .2s ease-out;
   border: none;
@@ -193,4 +200,31 @@ a:hover {
 
 .no-scroll {
   overflow-y: hidden;
+}
+
+
+footer {
+  background-color: #EFF3FB;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+  width: 100%;
+}
+
+footer ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px 0;
+  margin: 0;
+}
+
+footer li {
+  list-style: none;
+  padding: 0 6px;
+}
+
+footer li + li {
+  border-left: 1px solid;
 }
