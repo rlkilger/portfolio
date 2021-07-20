@@ -9,14 +9,22 @@ fetch("https://www.themealdb.com/api/json/v1/1/categories.php")
       const categories = jsonObject["categories"];
       //console.log(categories);
 
+      const message = document.querySelector('.message');
+
       const categoryList = document.querySelector("#category-list");
       categoryList.innerHTML = renderCategoryList(categories);
-
-      const search = document.querySelector('#search-button');
-      const message = document.querySelector('.message');
-      search.onclick = (event) => {
+      const categoryButton = document.querySelector('#category-button');
+      categoryButton.onclick = (event) => {
         event.preventDefault();
         getMealsByCategory(categoryList.value);
+        message.classList.add("hidden");
+      };
+
+      const searchButton = document.querySelector('#search-button');
+      searchButton.onclick = (event) => {
+        event.preventDefault();
+        document.querySelector(".meal-list").innerHTML = "";
+        getMealsByTitle(categories);
         message.classList.add("hidden");
       };
       
@@ -45,6 +53,43 @@ function getMealsByCategory(category) {
       .catch(function(error) {
         console.log(error);
       });
+}
+
+
+function getMealsByTitle(categories) {
+  const mealsByCategoryURL = "https://www.themealdb.com/api/json/v1/1/filter.php?c=";
+  const searchInput = document.querySelector('#search-input').value;
+  const mealList = document.querySelector(".meal-list");
+  let searchList = [];
+  //console.log(categories);
+  categories.forEach(item => {
+    category = item.strCategory;
+    //console.log(category);
+    fetch(mealsByCategoryURL + category)
+      .then(function(response) {
+          return response.json();
+      })
+      .then(function (jsonObject) {
+        const meals = jsonObject["meals"];
+        //console.log(searchInput);
+
+        meals.forEach(meal => {
+          let mealName = meal.strMeal;
+          //console.log(mealName);
+          if (mealName.toLowerCase().includes(searchInput.toLowerCase())) {
+            mealList.innerHTML += renderMealLight(meal);
+            //console.log(mealName)
+          }
+        });
+      })
+      .catch(function(error) {
+        console.log(error);
+      });
+  });
+
+  //mealList.innerHTML = renderMealList(searchList);
+  mealList.addEventListener('click', getMealByID);
+  
 }
 
 

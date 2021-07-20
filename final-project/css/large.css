@@ -1,4 +1,4 @@
-@media only screen and (min-width: 950px) {
+@media only screen and (min-width: 920px) {
   .meal-list {
     grid-template-columns: repeat(3, 300px);
   }
@@ -6,4 +6,15 @@
   h1 {
     background-size: 100%;
   }
+
+  .forms {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  p {
+    padding: 20px 10px;
+  }
+
 }

@@ -30,15 +30,18 @@ h1 {
   font-size: 70px;
   font-weight: bold;
   text-align: center;
-  margin: 0 0 30px;
+  margin: 0;
   padding: 70px 0;
+}
+
+.forms {
+  padding: 30px 0;
+  border-bottom: 1px solid #373D3F;
 }
 
 form {
   text-align: center;
-  border-bottom: 1px solid #373D3F;
-  padding-bottom: 30px;
-  margin-bottom: 30px;
+  padding: 0 15px;
 }
 
 form label {
@@ -48,10 +51,18 @@ form label {
 
 select {
   width: 200px;
-  margin-right: 15px;
+  margin-right: 10px;
   margin-bottom: 10px;
 }
 
+input {
+  width: 180px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+#category-button,
 #search-button {
   background-color: #D33822;
   color: white;
@@ -61,6 +72,7 @@ select {
   border-radius: 15px;
 }
 
+#category-button:hover,
 #search-button:hover {
   background-color: #E1633D;
 }
@@ -71,6 +83,12 @@ ul {
 
 li {
   padding: 20px 0;
+}
+
+p {
+  font-size: 18px;
+  padding: 10px;
+  text-align: center;
 }
 
 .full-meal h3 {

@@ -16,11 +16,19 @@
   <body>
     <main>
       <h1>Cravings</h1>
-      <form>
-        <label for="category-list">Search recipes by category.</label>
-        <select name="category-list" id="category-list"></select>
-        <button id="search-button">Search</button>
-      </form>
+      <div class="forms">
+        <form>
+          <label for="category-list">Search recipes by category.</label>
+          <select name="category-list" id="category-list"></select>
+          <button id="category-button">Search</button>
+        </form>
+        <p>OR</p>
+        <form>
+          <label for="search-input">Search titles by key word.</label>
+          <input name="search-input" id="search-input" placeholder="Search by key word"></input>
+          <button id="search-button">Search</button>
+        </form>
+      </div>
       <div class="message">Select a category to view meals.</div>
       <ul class="meal-list">
       </ul>
