@@ -131,7 +131,7 @@ ul li {
 }
 
 a {
-  color: #D33822;
+  color: #C1321F;
   text-decoration: none;
   transition: color .2s ease-out;
 }
@@ -211,7 +211,8 @@ a:hover {
   font-size: 18px;
   background-color: #EFF3FB;
   text-align: center;
-  width: 250px;
+  width: 500px;
+  max-width: 90%;
   padding: 10px;
   margin: 40px auto;
 }
